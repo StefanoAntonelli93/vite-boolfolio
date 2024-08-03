@@ -6,6 +6,6 @@
 @use "./partials/utilites" as *;
 @use "./partials/typography" as *;
 
-body {
-  color: red;
-}
+// installo bootstrap
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
