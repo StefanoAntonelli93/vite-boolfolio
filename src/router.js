@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import AppHome from "./pages/AppHome.vue";
-import AppCard from "./pages/AppCard.vue";
+import AppProject from "./pages/AppProject.vue";
+import ProjectDetail from "./pages/ProjectDetail.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -12,9 +13,14 @@ const router = createRouter({
       component: AppHome,
     },
     {
-      path: "/card",
-      name: "Card",
-      component: AppCard,
+      path: "/project",
+      name: "Project",
+      component: AppProject,
+    },
+    {
+      path: "/project/:slug",
+      name: "Details",
+      component: ProjectDetail,
     },
   ],
 });

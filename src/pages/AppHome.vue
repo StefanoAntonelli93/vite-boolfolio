@@ -10,11 +10,9 @@ export default {
 </script>
 
 <template>
-  <main>
-    <div class="container vh-100">
-      <h1>{{ title }}</h1>
-    </div>
-  </main>
+  <div class="container vh-100 py-3">
+    <h1>{{ title }}</h1>
+  </div>
 </template>
 
 <style></style>

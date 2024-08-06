@@ -8,7 +8,7 @@ export default {
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container">
-        <a class="navbar-brand" href="#">Vite-Boolfolio</a>
+        <a class="navbar-brand" href="/">Vite-Boolfolio</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -31,7 +31,7 @@ export default {
             </li>
             <li class="nav-item">
               <!-- router link-->
-              <router-link class="nav-link" :to="{ name: 'Card' }"
+              <router-link class="nav-link" :to="{ name: 'Project' }"
                 >Projects</router-link
               >
               <!-- <a class="nav-link" href="#">Projects</a> -->

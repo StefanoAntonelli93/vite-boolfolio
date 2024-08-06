@@ -34,7 +34,7 @@ export default {
             console.log("errore chiamata api");
           }
         })
-        .catch((error) => HTMLFormControlsCollection.log(error));
+        .catch((error) => console.log(error));
     },
   },
   created() {
