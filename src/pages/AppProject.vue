@@ -15,14 +15,29 @@ export default {
         baseUrl: "http://127.0.0.1:8000/api/",
         endPoints: "projects",
       },
+      currentPage: 1,
     };
   },
   methods: {
+    prevPage() {
+      console.log("pagina precedente");
+      this.currentPage--;
+      this.getProjects();
+    },
+    nextPage() {
+      console.log("pagina seguente");
+      this.currentPage++;
+      this.getProjects();
+    },
     getProjects() {
       const url = this.api.baseUrl + this.api.endPoints;
       //   console.log(url);
       axios
-        .get(url)
+        .get(url, {
+          params: {
+            page: this.currentPage,
+          },
+        })
         .then((response) => {
           //   console.log(response);
           // se l'array è popolato restituisci qualcosa altrimenti messaggio errore
@@ -48,7 +63,7 @@ export default {
     <h1 class="py-3">{{ title }}</h1>
     <div class="row">
       <div class="col-6" v-for="project in projects">
-        <!-- passo le propos a componente CardProject -->
+        <!-- passo le props a componente CardProject -->
         <CardProject
           :name="project.name"
           :slug="project.slug"
@@ -56,6 +71,10 @@ export default {
         />
       </div>
     </div>
+    <nav class="py-4 d-flex justify-content-between">
+      <button class="btn btn-primary" @click="prevPage">prev</button>
+      <button class="btn btn-primary" @click="nextPage">next</button>
+    </nav>
   </div>
 </template>
 
