@@ -1,6 +1,8 @@
 <script>
 // importo axios
 import axios from "axios";
+import AppHeader from "./components/AppHeader.vue";
+import AppFooter from "./components/AppFooter.vue";
 
 export default {
   name: "Projects",
@@ -9,6 +11,10 @@ export default {
       title: "Progetti",
       projects: [],
     };
+  },
+  components: {
+    AppHeader,
+    AppFooter,
   },
   methods: {
     testLifeCycle() {
@@ -22,7 +28,8 @@ export default {
           // se l'array è popolato restituisci qualcosa altrimenti messaggio errore
           if (response.data.results.data.length) {
             // console.log(response.data.results);
-            this.projects = response.data.results;
+            this.projects = response.data.results.data;
+            console.log(response.data.results.data);
           } else {
             console.log("errore chiamata api");
           }
@@ -38,13 +45,15 @@ export default {
 </script>
 
 <template>
-  <header>header</header>
+  <AppHeader />
+
   <main>
-    <div class="container">
-      <h1>{{ title }}</h1>
+    <div class="conteiner">
+      <router-view></router-view>
     </div>
   </main>
-  <footer>footer</footer>
+
+  <AppFooter />
 </template>
 
 <style scoped lang="scss"></style>
