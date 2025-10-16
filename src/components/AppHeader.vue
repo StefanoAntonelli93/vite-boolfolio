@@ -8,7 +8,7 @@ export default {
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container">
-        <a class="navbar-brand" href="/">Portfolio</a>
+        <a class="navbar-brand" href="/">App Test</a>
         <button
           class="navbar-toggler"
           type="button"
