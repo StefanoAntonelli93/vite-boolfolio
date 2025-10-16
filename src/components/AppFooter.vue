@@ -24,7 +24,7 @@ export default {
           <a href="#" class="nav-link px-2 text-body-secondary">About</a>
         </li>
       </ul>
-      <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
+      <p class="text-center text-body-secondary">© 2025 Company, Inc</p>
     </footer>
   </footer>
 </template>
